@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'translator && aws && build && poc'
+ } 
 
   stages {
       stage('Build Artifact') {

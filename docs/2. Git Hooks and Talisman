@@ -1,0 +1,37 @@
+# Pre-commit/pre-push Hooks
+Sensitive informatio nsusch as the access keys, access tokens, SSH keys etc. are often erroneously leaked due to accidental git commits.
+Pre-commit hooks can be installed on developer's workstations to avoid them.
+Work on pure Regex-based approach for filtering sensitive data.
+If developers want, they can bypass this step.
+
+# Talisman – Keep your secrets secret
+https://thoughtworks.github.io/talisman/docs
+Talisman is an open source tool
+Taliman installs a hook to your repository to ensure that potential secrets or sensitvie information do not leave the developer's worksation.
+It validates the outgoing change for things that look suspicious like potential SSH keys, authorization tokens, private keys, etc.
+
+### Global Installation - talisman will thus  be present, not only in your existing git repositories, but also in any new repository that you 'init' or 'clone'.
+Global - pre-commit hook:
+Global - pre-push hook:
+
+### Single Project Installation - Talisman will be rpesent only in a single git repository.
+Single project - pre-push hook:
+Single project - pre-commit hook:
+
+## talisman reports and ignore contents
+Taliman works based on pattern matching.
+Encoded values, File content, file size, entropy credit card num, file name, etc.
+
+ 
+
+### remove the functions of Talisman
+Bypass/Skip Talisman Hooks `git push origin --no-verify`
+
+Remove Talisman Hooksremove the hook manyakkt bt deketubg tge Takusnab ore-commit or pre-push hook from `.git/hooks` folder in repository.
+
+
+To ignore particular file 
+
+1. Create .talismanrc file 
+
+Copy fileignoreconfig to .talismanrc 

@@ -1,4 +1,8 @@
 fileignoreconfig:
-- filename: sec_files/file3
-  checksum: b058bbb84595454d550863a6ae7fd501863acd9692ec3cc699bc6f76dd0e38a5
+- filename: Jenkinsfile
+  checksum: bebb5be0b98d0bf26100def500134fea974b092cb6aeb01e4a54a2fd97bf535a
+- filename: docs/4. SonarQube.md
+  checksum: be6515237e04710f20493e6317bbc8e1349a58797419c3879a88540e3c3417cf
+- filename: docs/2. GitHooks&Talisman.md
+  checksum: a90709f44801a46635925e13aee0636b5578d56508c510e7bc90be4516b37f44
 version: ""

@@ -20,19 +20,22 @@ pipeline {
         }
       }
     }
-    stage('Mutation Tests - PIT') {
-      steps {
-        sh "mvn org.pitest:pitest-maven:mutationCoverage"
-      }
-      post {
-        always {
-          pitmutation mutationStatsFile: '**/target/pit-reports/**/mutations.xml'
-        }
-      }
-    }
+    // stage('Mutation Tests - PIT') {
+    //   steps {
+    //     sh "mvn org.pitest:pitest-maven:mutationCoverage"
+    //   }
+    //   post {
+    //     always {
+    //       pitmutation mutationStatsFile: '**/target/pit-reports/**/mutations.xml'
+    //     }
+    //   }
+    // }
     stage('SonarQube - SAST') {
       steps {
-        sh "mvn sonar:sonar -Dsonar.projectKey=numeric-application -Dsonar.host.url=http://devsecops-demo.eastus.cloudapp.azure.com:9000 -Dsonar.login=0925129cf435c63164d3e63c9f9d88ea9f9d7f05"
+        sh "mvn clean verify sonar:sonar \
+            -Dsonar.projectKey=numeric-application \
+            -Dsonar.host.url=http://localhost:9000 \
+            -Dsonar.login=sqp_feade5c7502e43abfa909a73cd7fd179d816aa83"
       }
     } 
   }

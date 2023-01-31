@@ -1,8 +1,5 @@
-FROM maven:3.8.6-jdk-11 AS build
+FROM openjdk:8-jdk-alpine
 EXPOSE 8080
-COPY . ./
-RUN mvn clean package -DskipTests=true
-RUN mvn org.pitest:pitest-maven:mutationCoverage
+ARG JAR_FILE=target/*.jar
+ADD ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
-
-#Try another way for the report.

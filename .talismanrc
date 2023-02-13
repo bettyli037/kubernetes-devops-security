@@ -4,5 +4,5 @@ fileignoreconfig:
 - filename: docs/4. SonarQube.md
   checksum: be6515237e04710f20493e6317bbc8e1349a58797419c3879a88540e3c3417cf
 - filename: docs/2. GitHooks&Talisman.md
-  checksum: 5d98a8e7199b3a5fbdff86997cbb1486023c217e21e282fc62a393283476d140
-version: "0.0.1"
+  checksum: d3b585c8c89ea786844a719269ae946d024ca41c81ecefa81fde1d69da69d6ef 
+version: "0.0.2"

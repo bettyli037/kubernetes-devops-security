@@ -20,22 +20,12 @@ pipeline {
         }
       }
     }
-    // stage('Mutation Tests - PIT') {
-    //   steps {
-    //     sh "mvn org.pitest:pitest-maven:mutationCoverage"
-    //   }
-    //   post {
-    //     always {
-    //       pitmutation mutationStatsFile: '**/target/pit-reports/**/mutations.xml'
-    //     }
-    //   }
-    // }
     stage('SonarQube - SAST') {
       steps {
         sh "mvn clean verify sonar:sonar \
             -Dsonar.projectKey=numeric-application \
-            -Dsonar.host.url=http://localhost:9000 \
-            -Dsonar.login=sqp_feade5c7502e43abfa909a73cd7fd179d816aa83"
+            -Dsonar.host.url=http://sonarqube-bl-1456515170.us-east-1.elb.amazonaws.com \
+            -Dsonar.login=sqp_4f740a0a03b4916fcdb1e8b115fa843ed229832c"
       }
     } 
   }
